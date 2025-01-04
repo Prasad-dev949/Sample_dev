@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retrieve Results</title>
+  <style>
+     body {
+      font-family: sans-serif;
+      text-align: center;
+      background-image: url('image3.jpg');
+ 
+    }
+
+    .container {
+      margin: 50px auto;
+      width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="number"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #results {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #results p {
+      margin: 5px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Retrieve Results</h2>
+  <form id="searchForm">
+    <label for="Name">Enter Name:</label><br>
+    <input type="text" id="Name" name="Name" required>
+    <label for="Id">Enter Id:</label><br>
+    <input type="number" id="Id" name="Id">
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="results"></div>
+</div>
+
+<script>
+
+  const searchForm = document.getElementById('searchForm');
+  const resultsDiv = document.getElementById('results');
+
+  searchForm.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+
+    const Name = document.getElementById('Name').value;
+    const Id = document.getElementById('Id').value;
+    
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'getresults2.php', true); 
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        resultsDiv.innerHTML = xhr.responseText; 
+      } else {
+        resultsDiv.innerHTML = 'Error retrieving results.';
+      }
+    };
+    xhr.send('Name=' + encodeURIComponent(Name));
+    xhr.send('Id=' + encodeURIComponent(Id));
+  });
+
+</script>
+
+</body>
+</html>
+
+

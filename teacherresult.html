@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Results entry</title>
+ 
+  <style>
+    body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  background-image:url('image4.jpg') ;
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.signup-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.signup-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.signup-btn:hover {
+  background-color: #45a049;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  color: #333;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+.btn{
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  
+  align-content : left;
+}
+  </style>
+</head>
+<body>
+
+  <div class="signup-container">
+    <h2>Results Entry Form</h2>
+
+    <form method="POSt">
+      <div class="form-group">
+        <label for="username">Name:</label>
+        <input type="text" id="text" name="Name" placeholder="Name" required>
+      </div>
+      <div class="form-group">
+        <label for="Id">Id:</label>
+        <input type="number" id="text" name="Id" placeholder="Id" required>
+      </div>
+
+      <h4><big><u>SUBJECT MARKS:</u></big></h4>
+      <div class="form-group">
+        <label for="OOPs">OOPs:</label>
+        <input type="number" id="OOPs" name="OOPs" min="0" max="100"  required>
+      </div>
+      <div class="form-group">
+        <label for="Web technology">Web technology:</label> 
+        <input type="number" id="text" name="web_Technologies" min="0" max="100"  required>
+      </div>
+      <div class="form-group">
+        <label for="Maths">Maths:</label>
+        <input type="number" id="text" name="Maths" min="0" max="100"  required>
+      </div>
+      <div class="form-group">
+        <lable for="COMP">COMP:</lable>
+        <input type="number" id="text" name="COMP" min="0" max="100"  required>
+      </div>
+      <div class="form-group">
+        <lable for="omputer networks">Computer Networks:</lable>
+        <input type="number" id="text" name="Computer Networks" min="0" max="100"  required>
+       </div>
+       <h4><big><u>LAB INTERNAL MARKS:</u></big></h4>
+       <div class="form-group">
+        <lable for="OOPs Lab">OOPs Lab:</lable>
+        <input type="number" id="text" name="OOPs Lab" min="0" max="40"  required>
+       </div>
+       <div class="form-group">
+        <lable for="Web technology Lab">Web technology Lab:</lable>
+        <input type="number" id="text" name="Web technology Lab" min="0" max="40"  required>
+       </div>
+       <div class="form-group">
+        <lable for="Computer networks Lab">Computer networks Lab:</lable>
+        <input type="number" id="text" name="Computer networks Lab" min="0" max="40" required>
+       </div>
+       <div class="form-group">
+        <lable for="Communication Skills Lab">Communication Skills Lab:</lable>
+        <input type="number" id="text" name="Communication_skills_Lab" min="0" max="40" required>
+       </div>
+       <h4><big><u>LAB EXTERNAL MARKS:</u></big></h4>
+       <div class="form-group">
+        <lable for="opps lab">OOPs lab:</lable>
+        <input type="number" id="text" name="opps_lab" min="0" max="60"  required>
+       </div>
+       <div class="form-group">
+        <lable for="WT lab">WT lab:</lable>
+        <input type="number" id="text" name="WT lab" min="0" max="60" required>
+       </div>
+       <div class="form-group">
+        <lable for="CN lab">CN lab:</lable>
+        <input type="number" id="text" name="CN lab" min="0" max="60" required>
+       </div>
+       <div class="form-group">
+        <lable for="CS lab">CS lab:</lable>
+        <input type="number" id="text" name="CS lab" min="0" max="60" required>
+       </div>
+
+
+      <button type="submit" class="signup-btn">Submit</button>
+    </form>
+    
+    
+  </div>
+  <div class="button-group">
+    <a href="homepage.html" class="btn">Home</a>
+  </div>
+
+</body>
+</html>
